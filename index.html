@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayaka Kamisato | Premium WhatsApp Bot & Script</title>
+  <meta name="description" content="Ayaka Kamisato adalah asisten WhatsApp Premium & Modern. Dilengkapi AI, Downloader super cepat, dan fitur RPG interaktif. Beli script atau sewa bot sekarang.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient Background -->
+<div class="bg-ambient" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <div class="logo" onclick="navigate('home')" role="button" tabindex="0" aria-label="Go to Home">
+      <div class="logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+      </div>
+      <span class="logo-text">Ayaka<span>.</span></span>
+    </div>
+
+    <!-- Desktop Nav Links -->
+    <ul class="nav-links" role="menubar">
+      <li role="none"><button data-nav="home" onclick="navigate('home')" class="nav-link active" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Home
+      </button></li>
+      <li role="none"><button data-nav="keunggulan" onclick="navigate('keunggulan')" class="nav-link" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Keunggulan
+      </button></li>
+      <li role="none"><button data-nav="teknologi" onclick="navigate('teknologi')" class="nav-link" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 9h1v6H9"/><path d="m14 9-2 3 2 3"/></svg>
+        Teknologi
+      </button></li>
+      <li role="none"><button data-nav="harga" onclick="navigate('harga')" class="nav-link" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Harga Script
+      </button></li>
+      <li role="none"><button data-nav="sewa" onclick="navigate('sewa')" class="nav-link" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        Sewa Bot
+      </button></li>
+      <li role="none"><button data-nav="contact" onclick="navigate('contact')" class="nav-link" role="menuitem">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Contact Us
+      </button></li>
+    </ul>
+
+    <!-- Desktop actions -->
+    <div class="nav-actions">
+      <a href="https://wa.me/6285825143528" target="_blank" rel="noopener" class="nav-icon-btn" title="WhatsApp Admin" aria-label="WhatsApp Admin">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+      </a>
+      <a href="https://instagram.com/__andifadlan" target="_blank" rel="noopener" class="nav-icon-btn" title="Instagram" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+    </div>
+
+    <!-- Mobile actions + hamburger -->
+    <div class="mobile-menu-btn">
+      <a href="https://wa.me/6285825143528" target="_blank" rel="noopener" style="color: var(--text-muted); transition: color 0.2s;" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+      </a>
+      <button id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <nav style="margin-bottom: 1rem;">
+    <button data-nav="home" onclick="navigate('home')" class="mobile-nav-link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      Home
+    </button>
+    <button data-nav="keunggulan" onclick="navigate('keunggulan')" class="mobile-nav-link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Keunggulan
+    </button>
+    <button data-nav="teknologi" onclick="navigate('teknologi')" class="mobile-nav-link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 9h1v6H9"/><path d="m14 9-2 3 2 3"/></svg>
+      Teknologi
+    </button>
+    <button data-nav="harga" onclick="navigate('harga')" class="mobile-nav-link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+      Harga Script
+    </button>
+    <button data-nav="sewa" onclick="navigate('sewa')" class="mobile-nav-link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      Sewa Bot
+    </button>
+    <button data-nav="contact" onclick="navigate('contact')" class="mobile-nav-link">
+      <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Contact Us
+    </button>
+  </nav>
+  <div style="border-top: 1px solid var(--border); padding-top: 1rem; display: flex; gap: 10px;">
+    <a href="https://wa.me/6285825143528" target="_blank" rel="noopener"
+       style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 12px; background: rgba(37,211,102,0.1); color: #25D366; font-size: 0.875rem; font-weight: 600; text-decoration: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+      WhatsApp
+    </a>
+    <a href="https://instagram.com/__andifadlan" target="_blank" rel="noopener"
+       style="flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 12px; background: rgba(225,48,108,0.1); color: #E1306C; font-size: 0.875rem; font-weight: 600; text-decoration: none;">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      Instagram
+    </a>
+  </div>
+</div>
+
+<!-- ==================== MAIN ==================== -->
+<main>
+
+  <!-- ====== 1. HOME ====== -->
+  <section id="home" class="page-section">
+    <div class="section-container">
+
+      <!-- Hero -->
+      <div class="hero-wrapper reveal">
+        <!-- Floating bot icon -->
+        <div style="margin-bottom: 1.75rem; display: flex; justify-content: center;">
+          <div class="animate-float" style="width: 80px; height: 80px; border-radius: 24px; background: linear-gradient(135deg, #C8102E, #8B0000); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 40px rgba(200,16,46,0.35);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          </div>
+        </div>
+
+        <!-- Badges -->
+        <div class="hero-badges">
+          <span class="pill pill-red">
+            <span class="pulse-dot"></span>
+            Online 24/7
+          </span>
+          <span class="pill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            100+ User Aktif
+          </span>
+          <span class="pill">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            50+ Grup Terhubung
+          </span>
+        </div>
+
+        <h1 class="display-heading hero-title">
+          Asisten Cerdas Untuk<br>
+          <span class="text-gradient">Grup WhatsApp Anda</span>
+        </h1>
+        <p class="hero-desc">
+          Otomatisasi grup, unduh media instan, teknologi AI canggih, dan mainkan puluhan game RPG seru — semua dalam satu bot.
+        </p>
+        <div class="hero-actions">
+          <a href="https://chat.whatsapp.com/CMWxneFpwcPDoMuh66eY2v" target="_blank" rel="noopener" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+            Coba Bot Sekarang
+          </a>
+          <button onclick="navigate('keunggulan')" class="btn-secondary">
+            Lihat Keunggulan
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats bar -->
+      <div class="reveal reveal-delay-1" style="max-width: 600px; margin: 4rem auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border-radius: 20px; overflow: hidden; border: 1px solid var(--border);">
+        <div class="stat-item" style="padding: 24px 16px; background: var(--bg-card);">
+          <div class="stat-number text-gradient">1000+</div>
+          <div class="stat-label">Fitur Tersedia</div>
+        </div>
+        <div class="stat-item" style="padding: 24px 16px; background: var(--bg-card); border-left: 1px solid var(--border); border-right: 1px solid var(--border);">
+          <div class="stat-number text-gradient">24/7</div>
+          <div class="stat-label">Server Online</div>
+        </div>
+        <div class="stat-item" style="padding: 24px 16px; background: var(--bg-card);">
+          <div class="stat-number text-gradient">&lt;1s</div>
+          <div class="stat-label">Response Time</div>
+        </div>
+      </div>
+
+      <!-- Video Demo -->
+      <div class="video-wrapper reveal reveal-delay-2">
+        <div class="text-center mb-8">
+          <h2 class="section-heading">Aksi Nyata <span class="text-gradient">Ayaka</span></h2>
+          <div class="divider"></div>
+          <p class="text-subtle mt-4">Lihat seberapa cepat dan stabil bot kami merespon.</p>
+        </div>
+
+        <!-- Video container — click to open modal -->
+        <div class="video-frame" onclick="openVideoModal()" role="button" tabindex="0" aria-label="Play demo video">
+          <img src="https://images.unsplash.com/photo-1614680376593-902f74a936c2?q=80&w=2000&auto=format&fit=crop" alt="Demo Bot Ayaka">
+          <div class="video-overlay"></div>
+          <div class="play-btn">
+            <div class="play-circle">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="white" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-6">
+          <a href="https://chat.whatsapp.com/CMWxneFpwcPDoMuh66eY2v" target="_blank" rel="noopener"
+             style="display: inline-flex; align-items: center; gap: 6px; color: var(--red); font-weight: 600; font-size: 0.9rem; text-decoration: none; border-bottom: 1px solid rgba(200,16,46,0.3); padding-bottom: 2px; transition: border-color 0.2s;">
+            Masuk Grup Demo
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="mt-20 reveal">
+        <div class="text-center mb-12">
+          <h2 class="section-heading">Kata <span class="text-gradient">Mereka</span></h2>
+          <div class="divider"></div>
+          <p class="text-subtle mt-4">Dipercaya oleh puluhan admin grup WhatsApp.</p>
+        </div>
+
+        <div class="grid-3" style="max-width: 960px; margin: 0 auto;">
+          <!-- Testi 1 -->
+          <div class="testi-card">
+            <div style="position: absolute; top: 20px; right: 20px; opacity: 0.04;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size: 0.9rem; color: var(--text-subtle); margin-bottom: 1.25rem; line-height: 1.7;">"Semenjak pake Ayaka, grup mabar makin rame. Fitur game RPG-nya nagih banget, apalagi anti delay pas lagi rame-ramenya."</p>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div class="testi-avatar" style="background: rgba(59,130,246,0.15); color: #60A5FA;">R</div>
+              <div>
+                <div style="font-weight: 700; font-size: 0.875rem;">Rangga Aditya</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Admin Grup Mabar</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testi 2 -->
+          <div class="testi-card testi-featured">
+            <div style="position: absolute; top: 20px; right: 20px; opacity: 0.04;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size: 0.9rem; color: var(--text-subtle); margin-bottom: 1.25rem; line-height: 1.7;">"Beli script Premium sangat worth it. Setup gampang, struktur rapi. Sekarang udah balik modal dari hasil sewain bot ini ke orang lain."</p>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div class="testi-avatar" style="background: rgba(200,16,46,0.15); color: #f87171;">F</div>
+              <div>
+                <div style="font-weight: 700; font-size: 0.875rem;">Faisal Developer</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Pembeli Script</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testi 3 -->
+          <div class="testi-card">
+            <div style="position: absolute; top: 20px; right: 20px; opacity: 0.04;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p style="font-size: 0.9rem; color: var(--text-subtle); margin-bottom: 1.25rem; line-height: 1.7;">"Downloader TikTok HD sama IG nya dewa parah. Gak perlu pake aplikasi tambahan lagi. Tinggal copas link, bot langsung kirim video."</p>
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <div class="testi-avatar" style="background: rgba(34,197,94,0.15); color: #4ADE80;">S</div>
+              <div>
+                <div style="font-weight: 700; font-size: 0.875rem;">Siti Nur</div>
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Pengguna Aktif</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8">
+          <a href="https://whatsapp.com/channel/0029Vb7t19Z3GJP49ynXKj1V" target="_blank" rel="noopener" class="btn-secondary" style="display: inline-flex;">
+            Lihat Testimoni Lengkap
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== 2. KEUNGGULAN ====== -->
+  <section id="keunggulan" class="page-section">
+    <div class="section-container">
+
+      <div class="text-center mb-16 reveal">
+        <h2 class="section-heading">Mengenal <span class="text-gradient">Ayaka</span> Lebih Dekat</h2>
+        <div class="divider"></div>
+        <p class="text-subtle mt-4 mx-auto" style="max-width: 520px;">Satu bot untuk semua kebutuhan grup. Hiburan, manajemen, dan produktivitas dalam satu genggaman.</p>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="grid-3 mb-20 reveal">
+        <div class="feature-card" style="border-top: 3px solid #3B82F6;">
+          <div class="feature-icon" style="background: rgba(59,130,246,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 1 8 8v1.5a2.5 2.5 0 0 1-5 0V10a3 3 0 1 0-3 3"/><path d="M6 2a8 8 0 0 0 0 16H12"/></svg>
+          </div>
+          <h3 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 10px;">AI Intelligence</h3>
+          <p style="font-size: 0.875rem; color: var(--text-subtle); line-height: 1.7;">Dilengkapi GPT-4, Gemini (Support Image), AI Persona Karakter, hingga AI Image Filter (ToAnime). Teman ngobrol cerdas 24/7.</p>
+        </div>
+        <div class="feature-card" style="border-top: 3px solid #22C55E;">
+          <div class="feature-icon" style="background: rgba(34,197,94,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 17 12 21 16 17"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.88 18.09A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.29"/></svg>
+          </div>
+          <h3 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 10px;">Super Downloader</h3>
+          <p style="font-size: 0.875rem; color: var(--text-subtle); line-height: 1.7;">Unduh konten TikTok HD, Instagram (Reels/Story), FB, Pinterest, hingga YouTube Audio/Video dengan super cepat tanpa link eksternal.</p>
+        </div>
+        <div class="feature-card" style="border-top: 3px solid #A855F7;">
+          <div class="feature-icon" style="background: rgba(168,85,247,0.1);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C084FC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="5" x2="6" y2="19"/><path d="M20 9 9 12l11 3V9z"/></svg>
+          </div>
+          <h3 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 10px;">RPG & Multiplayer</h3>
+          <p style="font-size: 0.875rem; color: var(--text-subtle); line-height: 1.7;">Bukan game biasa. Mainkan tebak-tebakan, Family 100, hingga eksplorasi Dungeon secara multiplayer bersama anggota grup.</p>
+        </div>
+      </div>
+
+      <!-- Why Ayaka -->
+      <div class="mb-20 reveal">
+        <h3 style="font-family: var(--font-display); font-size: 1.75rem; text-align: center; margin-bottom: 2.5rem;">Kenapa Harus <span style="color: var(--red);">Ayaka?</span></h3>
+        <div class="grid-4">
+          <div class="why-card">
+            <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h4>Fast Response</h4>
+            <p>Balasan milidetik, tanpa delay meski grup sedang ramai.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h4>Stabil & Bebas Bug</h4>
+            <p>Server terawat dan script di-update setiap hari secara rutin.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+            <h4>Auto Payment</h4>
+            <p>Sistem TopUp saldo bot & beli premium terintegrasi otomatis.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#60A5FA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 15s-2 .5-4 0-2-2-4-2-2 .5-2 .5"/><path d="M9 18c-4.51 2-5-2-7-2"/><path d="M21 15c-1 0-2.5.5-3 1"/><path d="M2 12c0-5.5 4.5-10 10-10s10 4.5 10 10-4.5 10-10 10S2 17.5 2 12z"/></svg></div>
+            <h4>Support Interaktif</h4>
+            <p>Navigasi mudah menggunakan sistem Button & List Message WA.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="reveal" style="max-width: 860px; margin: 0 auto;">
+        <h3 style="font-family: var(--font-display); font-size: 1.75rem; text-align: center; margin-bottom: 2rem;">Ayaka <span style="color: var(--text-muted);">vs Bot Lain</span></h3>
+        <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; overflow: hidden;">
+          <div style="overflow-x: auto;">
+            <table class="compare-table">
+              <thead>
+                <tr>
+                  <th>Fitur Utama</th>
+                  <th class="col-ayaka">Ayaka ✨</th>
+                  <th>Bot Pasaran</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="color: var(--text-subtle); font-size: 0.875rem;">Struktur Script</td>
+                  <td class="col-ayaka" style="font-weight: 600;">ESM Plugins (Cepat)</td>
+                  <td style="color: var(--text-muted);">CommonJS (Berat)</td>
+                </tr>
+                <tr>
+                  <td style="color: var(--text-subtle); font-size: 0.875rem;">Downloader</td>
+                  <td class="col-ayaka" style="font-weight: 600;">Multi Platform HD</td>
+                  <td style="color: var(--text-muted);">Terbatas / Sering Error</td>
+                </tr>
+                <tr>
+                  <td style="color: var(--text-subtle); font-size: 0.875rem;">Teknologi AI</td>
+                  <td class="col-ayaka" style="font-weight: 600;">✓ Lengkap (Image/Anime)</td>
+                  <td style="color: var(--text-muted);">Hanya Teks Basic</td>
+                </tr>
+                <tr>
+                  <td style="color: var(--text-subtle); font-size: 0.875rem;">Game RPG</td>
+                  <td class="col-ayaka" style="font-weight: 600;">Multiplayer (Bareng)</td>
+                  <td style="color: var(--text-muted);">Solo Play</td>
+                </tr>
+                <tr>
+                  <td style="color: var(--text-subtle); font-size: 0.875rem;">Maintenance</td>
+                  <td class="col-ayaka" style="font-weight: 600;">✓ Update Rutin</td>
+                  <td style="color: var(--text-muted);">✗ Terbengkalai</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ====== 3. TEKNOLOGI ====== -->
+  <section id="teknologi" class="page-section">
+    <div class="section-container">
+      <div style="max-width: 860px; margin: 0 auto;">
+        <div class="text-center mb-12 reveal">
+          <div style="width: 56px; height: 56px; background: var(--red-dim); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h2 class="section-heading">Teknologi <span class="text-gradient">Di Balik Layar</span></h2>
+          <div class="divider"></div>
+          <p class="text-subtle mt-4">Dirancang khusus untuk performa tinggi dan kemudahan pengembangan (Developer Friendly).</p>
+        </div>
+
+        <div class="grid-2 reveal">
+          <div class="tech-card">
+            <h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z"/></svg>
+              Type Plugins System
+            </h4>
+            <p>Struktur folder sangat rapi. Setiap fitur dipisah menjadi file mandiri. Jika satu fitur error, tidak mengganggu fitur lain.</p>
+          </div>
+          <div class="tech-card">
+            <h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Modul ESM Modern
+            </h4>
+            <p>Menggunakan standar ECMAScript Modules (import/export). Eksekusi program lebih ringan, manajemen memori efisien dan aman dari leak.</p>
+          </div>
+          <div class="tech-card">
+            <h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+              @adiwajshing/baileys
+            </h4>
+            <p>Dibangun di atas library WhatsApp Web API terbaik saat ini, menjamin konektivitas Multi-Device stabil tanpa putus.</p>
+          </div>
+          <div class="tech-card">
+            <h4>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              Full Scraper Internal
+            </h4>
+            <p>Meminimalisir penggunaan API pihak ketiga yang berbayar. Fitur downloader menggunakan metode scraper mandiri untuk kelancaran.</p>
+          </div>
+        </div>
+
+        <div class="reveal" style="margin-top: 2rem; background: var(--red-dim); border: 1px solid rgba(200,16,46,0.2); border-radius: 14px; padding: 24px; text-align: center;">
+          <p style="color: var(--text-subtle); font-style: italic; font-size: 0.95rem; line-height: 1.7;">
+            "Membeli script Ayaka berarti Anda menghemat waktu berbulan-bulan riset.<br>Langsung pakai, langsung hasilkan uang dari jasa sewa."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 4. HARGA SCRIPT ====== -->
+  <section id="harga" class="page-section">
+    <div class="section-container">
+      <div class="text-center mb-16 reveal">
+        <h2 class="section-heading">Investasi <span class="text-gradient">Script Bot</span></h2>
+        <div class="divider"></div>
+        <p class="text-subtle mt-4 mx-auto" style="max-width: 500px;">Miliki source code penuh. Buka jasa sewa bot Anda sendiri dan raih keuntungan tanpa batas.</p>
+      </div>
+
+      <div class="pricing-grid reveal">
+        <!-- Basic Plan -->
+        <div class="pricing-card">
+          <span class="pricing-plan-label" style="background: rgba(255,255,255,0.06); color: var(--text-subtle);">Starter Package</span>
+          <h3 style="font-weight: 800; font-size: 1.5rem; margin-bottom: 4px;">Basic Plan</h3>
+          <div class="pricing-price">Rp 75.000</div>
+
+          <ul class="feature-list">
+            <li class="included">
+              <span class="feat-icon" style="background: rgba(34,197,94,0.12); color: #4ADE80;">✓</span>
+              Akses Penuh 1000+ Fitur
+            </li>
+            <li class="included">
+              <span class="feat-icon" style="background: rgba(34,197,94,0.12); color: #4ADE80;">✓</span>
+              Garansi Support 15 Hari
+            </li>
+            <li class="included">
+              <span class="feat-icon" style="background: rgba(34,197,94,0.12); color: #4ADE80;">✓</span>
+              Free ApiKey Default
+            </li>
+            <li>
+              <span class="feat-icon" style="background: rgba(239,68,68,0.1); color: #F87171;">✗</span>
+              Tidak Ada Free Update
+            </li>
+          </ul>
+
+          <a href="https://wa.me/6285825143528?text=Halo%20Owner,%20Saya%20ingin%20membeli%20Script%20Ayaka%20Paket%20Basic%20Rp75.000" target="_blank" rel="noopener" class="btn-secondary w-full" style="display: flex;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ADE80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+            Beli Basic Plan
+          </a>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="pricing-card featured">
+          <div class="pricing-badge">⭐ Paling Laris</div>
+          <span class="pricing-plan-label" style="background: var(--red-dim); color: var(--red);">Pro Package</span>
+          <h3 style="font-weight: 800; font-size: 1.5rem; color: #f87171; margin-bottom: 4px;">Premium Plan</h3>
+          <div class="pricing-price text-gradient">Rp 110.000</div>
+
+          <ul class="feature-list">
+            <li class="included">
+              <span class="feat-icon" style="background: rgba(34,197,94,0.12); color: #4ADE80;">✓</span>
+              Akses Penuh 1000+ Fitur
+            </li>
+            <li class="included">
+              <span class="feat-icon" style="background: rgba(34,197,94,0.12); color: #4ADE80;">✓</span>
+              Garansi Spesial 2 Bulan
+            </li>
+            <li class="included">
+              <span class="feat-icon" style="background: rgba(34,197,94,0.12); color: #4ADE80;">✓</span>
+              Free ApiKey Spesial
+            </li>
+            <li class="included">
+              <span class="feat-icon" style="background: var(--red-dim); color: var(--red);">✨</span>
+              Free Update Fitur Baru
+            </li>
+          </ul>
+
+          <a href="https://wa.me/6285825143528?text=Halo%20Owner,%20Saya%20ingin%20membeli%20Script%20Ayaka%20Paket%20Premium%20Rp110.000" target="_blank" rel="noopener" class="btn-primary w-full" style="display: flex;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+            Beli Premium Plan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 5. SEWA BOT ====== -->
+  <section id="sewa" class="page-section">
+    <div class="section-container">
+      <div class="text-center mb-14 reveal" style="max-width: 640px; margin-left: auto; margin-right: auto;">
+        <h2 class="section-heading">Sewa Ayaka <span class="text-gradient">Untuk Grup</span></h2>
+        <div class="divider"></div>
+        <p class="text-subtle mt-4">Jadikan grup lebih seru dengan bot cerdas, game RPG, dan downloader praktis. Server online 24/7 anti tidur.</p>
+        <div style="display: inline-flex; align-items: center; gap: 8px; margin-top: 1rem; background: rgba(251,191,36,0.08); border: 1px solid rgba(251,191,36,0.2); border-radius: 12px; padding: 10px 18px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <span style="color: #FBBF24; font-weight: 600; font-size: 0.875rem;">Instan Aktif — Bot langsung masuk grup Anda</span>
+        </div>
+      </div>
+
+      <div class="rent-grid reveal">
+        <div class="rent-card">
+          <div class="rent-label">Paket 1 Minggu</div>
+          <div class="rent-price">5k</div>
+        </div>
+        <div class="rent-card">
+          <div class="rent-label">Paket 2 Minggu</div>
+          <div class="rent-price">10k</div>
+        </div>
+        <div class="rent-card popular">
+          <span class="rent-badge-small">Populer</span>
+          <div class="rent-label">Paket 1 Bulan</div>
+          <div class="rent-price" style="color: #f87171;">15k</div>
+        </div>
+        <div class="rent-card">
+          <div class="rent-label">Paket 3 Bulan</div>
+          <div class="rent-price">30k</div>
+        </div>
+        <div class="rent-card">
+          <div class="rent-label">Paket 8 Bulan</div>
+          <div class="rent-price">50k</div>
+        </div>
+        <div class="rent-card popular" style="background: linear-gradient(135deg, rgba(200,16,46,0.1) 0%, var(--bg-card) 100%);">
+          <div class="rent-label" style="display: flex; align-items: center; justify-content: center; gap: 4px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            Permanent
+          </div>
+          <div class="rent-price" style="color: #f87171;">200k</div>
+        </div>
+      </div>
+
+      <div class="text-center reveal mt-6">
+        <a href="https://wa.me/6285825143528?text=Halo,%20saya%20tertarik%20untuk%20sewa%20bot%20Ayaka%20ke%20grup%20saya!" target="_blank" rel="noopener" class="btn-primary" style="font-size: 1.1rem; padding: 16px 40px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+          Sewa Bot Sekarang
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 6. CONTACT ====== -->
+  <section id="contact" class="page-section">
+    <div class="section-container">
+      <div class="text-center mb-14 reveal">
+        <h2 class="section-heading">Butuh Bantuan? <span class="text-gradient">Hubungi Kami</span></h2>
+        <div class="divider"></div>
+        <p class="text-subtle mt-4">Pilih salah satu platform di bawah untuk menghubungi layanan atau melihat informasi update terbaru.</p>
+      </div>
+
+      <div class="grid-4 reveal" style="max-width: 960px; margin: 0 auto;">
+        <!-- WA Admin -->
+        <div class="contact-card" style="border-top: 2px solid #25D366;">
+          <div class="contact-icon" style="background: rgba(37,211,102,0.1); color: #25D366;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h4>WhatsApp Admin</h4>
+          <p>Transaksi, beli script, atau konsultasi (Lann Official).</p>
+          <a href="https://wa.me/6285825143528" target="_blank" rel="noopener" class="contact-btn"
+             style="background: rgba(37,211,102,0.1); color: #25D366; border-color: rgba(37,211,102,0.25);"
+             onmouseover="this.style.background='#25D366'; this.style.color='#fff';"
+             onmouseout="this.style.background='rgba(37,211,102,0.1)'; this.style.color='#25D366';">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg>
+            Chat Admin
+          </a>
+        </div>
+
+        <!-- Bot Trial -->
+        <div class="contact-card" style="border-top: 2px solid #3B82F6;">
+          <div class="contact-icon" style="background: rgba(59,130,246,0.1); color: #60A5FA;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+          </div>
+          <h4>Nomor Bot (Trial)</h4>
+          <p>Coba fitur Ayaka langsung via personal chat (PC).</p>
+          <a href="https://wa.me/62882020451160" target="_blank" rel="noopener" class="contact-btn"
+             style="background: rgba(59,130,246,0.1); color: #60A5FA; border-color: rgba(59,130,246,0.25);"
+             onmouseover="this.style.background='#3B82F6'; this.style.color='#fff';"
+             onmouseout="this.style.background='rgba(59,130,246,0.1)'; this.style.color='#60A5FA';">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+            Uji Coba Bot
+          </a>
+        </div>
+
+        <!-- Instagram -->
+        <div class="contact-card" style="border-top: 2px solid #E1306C;">
+          <div class="contact-icon" style="background: rgba(225,48,108,0.1); color: #E1306C;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <h4>Instagram</h4>
+          <p>Ikuti developer untuk update info santai.</p>
+          <a href="https://instagram.com/__andifadlan" target="_blank" rel="noopener" class="contact-btn"
+             style="background: rgba(225,48,108,0.1); color: #E1306C; border-color: rgba(225,48,108,0.25);"
+             onmouseover="this.style.background='#E1306C'; this.style.color='#fff';"
+             onmouseout="this.style.background='rgba(225,48,108,0.1)'; this.style.color='#E1306C';">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Follow IG
+          </a>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-card" style="border-top: 2px solid var(--red);">
+          <div class="contact-icon" style="background: var(--red-dim); color: var(--red);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <h4>Email Bisnis</h4>
+          <p>Untuk keperluan kerjasama atau laporan penting.</p>
+          <a href="mailto:lannofficial2024@gmail.com" class="contact-btn" style="background: var(--red-dim); color: var(--red); border-color: rgba(200,16,46,0.25);" onmouseover="this.style.background='#C8102E'; this.style.color='#fff';" onmouseout="this.style.background='var(--red-dim)'; this.style.color='var(--red)';">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Kirim Email
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ==================== VIDEO MODAL ==================== -->
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║  CARA PAKAI VIDEO DARI GITHUB — BACA INI DULU!              ║
+  ╠══════════════════════════════════════════════════════════════╣
+  ║  1. Buat repository GitHub (bisa private atau public)        ║
+  ║  2. Upload file video kamu (contoh: demo.mp4)                ║
+  ║  3. Isi 2 variabel di bawah ini di dalam app.js:             ║
+  ║                                                              ║
+  ║     GITHUB_USER  = 'username_github_kamu'                    ║
+  ║     GITHUB_REPO  = 'nama_repo_kamu'                          ║
+  ║     GITHUB_FILE  = 'demo.mp4'  ← nama file videonya         ║
+  ║                                                              ║
+  ║  Sistem akan otomatis load dari:                             ║
+  ║  https://raw.githubusercontent.com/USER/REPO/main/FILE      ║
+  ╚══════════════════════════════════════════════════════════════╝
+-->
+<div id="video-modal" role="dialog" aria-modal="true" aria-label="Demo video">
+  <div class="modal-inner">
+    <button class="modal-close" id="modal-close" aria-label="Close video">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <!-- State: loading -->
+    <div id="video-loading" style="display:none; text-align:center; padding: 60px 20px;">
+      <div style="width:48px;height:48px;border:3px solid rgba(200,16,46,0.2);border-top-color:var(--red);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 1rem;"></div>
+      <p style="color:var(--text-muted);font-size:0.9rem;">Memuat video dari GitHub...</p>
+    </div>
+
+    <!-- State: video ready -->
+    <video id="demo-video" controls preload="none" style="display:none; width:100%; border-radius:16px; box-shadow:0 24px 80px rgba(0,0,0,0.6);">
+      Browser kamu tidak mendukung tag video.
+    </video>
+
+    <!-- State: not configured -->
+    <div id="video-not-set" class="video-upload-hint">
+      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="rgba(200,16,46,0.6)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 1rem;display:block;"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      <h3>Video GitHub Belum Dikonfigurasi</h3>
+      <p>Buka file <strong style="color:var(--text);">app.js</strong> dan isi variabel berikut di bagian paling atas:</p>
+      <code>const GITHUB_USER = 'username_kamu';<br>const GITHUB_REPO = 'nama_repo';<br>const GITHUB_FILE = 'demo.mp4';</code>
+      <p style="margin-top:14px;font-size:0.82rem;color:var(--text-muted);">
+        Pastikan file video sudah di-push ke branch <strong style="color:var(--text);">main</strong> di repository tersebut.
+      </p>
+    </div>
+
+    <!-- State: error -->
+    <div id="video-error" style="display:none;" class="video-upload-hint">
+      <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(200,16,46,0.7)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="margin:0 auto 1rem;display:block;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <h3>Gagal Memuat Video</h3>
+      <p id="video-error-msg" style="font-size:0.875rem;color:var(--text-muted);">File tidak ditemukan di repository GitHub.</p>
+      <button onclick="retryVideo()" style="margin-top:14px;padding:8px 20px;background:var(--red-dim);color:var(--red);border:1px solid rgba(200,16,46,0.3);border-radius:10px;cursor:pointer;font-size:0.875rem;font-family:var(--font-sans);">Coba Lagi</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="logo" onclick="navigate('home')" style="opacity: 0.6; cursor: pointer;">
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: rgba(200,16,46,0.3); display: flex; align-items: center; justify-content: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+      </div>
+      <span style="font-weight: 700; color: var(--text-muted); font-size: 0.95rem; letter-spacing: -0.01em;">Ayaka<span style="color: rgba(200,16,46,0.5);">.</span></span>
+    </div>
+    <p>&copy; 2026 Lann Official | Ayaka Kamisato AI. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+          </html>
